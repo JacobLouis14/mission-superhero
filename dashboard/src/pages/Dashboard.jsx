@@ -100,7 +100,7 @@ const Dashboard = () => {
       <div className="min-h-dvh p-4 overflow-x-scroll mt-20">
         {/* filter section */}
         <div className="flex flex-col sm:flex-row">
-          <div className="flex w-3/4">
+          <div className="flex w-full sm:w-3/4">
             <input
               type="text"
               placeholder="search"
@@ -121,7 +121,7 @@ const Dashboard = () => {
             onChange={(e) => {
               setFilter(e.target.value), greivanceFilterApi(e);
             }}
-            className="w-1/4 rounded-md p-2 outline-none sm:w-1/4 mt-4 sm:mt-0 sm:ms-4 block bg-gray-500 text-white border-0"
+            className="w-3/4 rounded-md p-2 outline-none sm:w-1/4 mt-4 sm:mt-0 sm:ms-4 block bg-gray-500 text-white border-0"
           >
             <option value="none" disabled>
               select filter

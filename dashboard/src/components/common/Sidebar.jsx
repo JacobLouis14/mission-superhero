@@ -13,11 +13,11 @@ const Sidebar = ({ isSideBarOpen, setIsSideBarOpen }) => {
       title: "Grievance",
       nav: "/dashboard",
     },
-    {
-      icon: <FormatListBulletedIcon />,
-      title: "Admin",
-      nav: "/dashboard/admin",
-    },
+    // {
+    //   icon: <FormatListBulletedIcon />,
+    //   title: "Admin",
+    //   nav: "/dashboard/admin",
+    // },
   ];
   const [selectedMenu, setSelectedMenu] = useState(0);
 
@@ -25,14 +25,14 @@ const Sidebar = ({ isSideBarOpen, setIsSideBarOpen }) => {
   const logoutHandler = () => {
     setAuthData({ token: "" });
     sessionStorage.removeItem("token");
-    navigate("/");
+    navigate("/", { replace: true });
   };
 
   return (
     <div
-      className={`absolute ${
+      className={`fixed ${
         isSideBarOpen ? "left-0" : "-left-60"
-      } sm:relative sm:left-0 h-screen border w-60 flex flex-col font-PG py-4 px-3 bg-gray-100`}
+      }  sm:left-0 h-screen border w-60 flex flex-col font-PG py-4 px-3 bg-gray-100`}
     >
       <button
         className="sm:hidden ms-auto"

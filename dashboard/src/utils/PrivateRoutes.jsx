@@ -9,7 +9,7 @@ const PrivateRoutes = () => {
     ? authData.token
     : sessionStorage.getItem("token");
 
-  if (!tokenToCheck) return <Navigate to="/" />;
+  if (!tokenToCheck) return <Navigate to="/" replace={true} />;
 
   return <Outlet />;
 };

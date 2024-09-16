@@ -26,7 +26,7 @@ const Login = () => {
     } else {
       setAuthData({ token: res.data.token });
       sessionStorage.setItem("token", res.data.token);
-      navigate("/dashboard");
+      navigate("/dashboard", { replace: true });
     }
   };
 

@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
         isSideBarOpen={isSideBarOpen}
         setIsSideBarOpen={setIsSideBarOpen}
       />
-      <div className="w-full">
+      <div className="sm:ms-60 w-full">
         <Appbar
           setIsSideBarOpen={setIsSideBarOpen}
           isSideBarOpen={isSideBarOpen}
