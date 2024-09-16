@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*::-webkit-scrollbar {
+  width: 0px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  width: 1px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.687);
+  border-radius: 10px;
+}
