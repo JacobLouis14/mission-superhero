@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const serverUrl = "http://localhost:5000/api";
+export const serverUrl = "https://mission-superhero.onrender.com/api";
 
 const serverApi = async ({ reqMethod, data, url }) => {
   try {
