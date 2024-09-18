@@ -1,0 +1,48 @@
+                        SUPER HERO WEBSITE
+                        ------------------
+
+    INTRODUCTION
+    ------------
+
+This is a basic website for users to submit their grievance to the hero. This platform aims
+to solve citizens problems. 
+
+    FEATURES
+    --------
+
+ - Grievance submission: users can submit grievance to hero.
+ - Admin dashboard: hero can see each grievance.
+
+    ROLES
+    -----
+
+ - Citizen: can submit grievance
+ - Admin: view all grievance
+
+    TECHNICAL SPECIFICATION
+    -----------------------
+
+ - Frontend: React.js,Tailwind,MaterialUi,Email.js,Framermotion,chatbotify    
+ - Backend: Node.js,Express.js
+ - Database: Mongo DB
+
+    API DOC
+    -------
+ - BASE_URL - https://mission-superhero.onrender.com/api
+ - ENDPOINTS 
+        - POST /grievance/create-grievance
+            - create new grievance
+        - GET /grievance/get-all-grievance
+            - get all grievance
+            - params: token
+            - query: dataPerPage,currentPage    
+        - GET /grievance/get-searched-grievance
+            - get searched grievance
+            - params: token
+            - query: searchvalue     
+        - GET /grievance/get-filtered-grievance
+            - get filtered grievance
+            - params: token
+            - query: dataPerPage,currentPage, filtervalue               
+        - POST /auth/login
+            - login in dashboard              

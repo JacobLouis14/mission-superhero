@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Introduction = ({ introductionRef }) => {
@@ -6,7 +6,8 @@ const Introduction = ({ introductionRef }) => {
     {
       imageUrl: "/ninja-eyes.jpg",
       title: "Who am I ?",
-      desc: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+      desc: `A specially abbled person who is dedicated to provide solutions to your problems. 
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Reiciendis, iure facere! Reprehenderit cupiditate, facilis tempore
             quos iure voluptatibus vitae accusantium deserunt dicta doloremque?
             Commodi quidem saepe suscipit exercitationem molestias possimus?
@@ -18,12 +19,29 @@ const Introduction = ({ introductionRef }) => {
     {
       imageUrl: "/hero-house.jpg",
       title: "Where ?",
-      desc: "hi",
+      desc: `This question has no proper answer, I belong to the place where someone is in need. 
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Reiciendis, iure facere! Reprehenderit cupiditate, facilis tempore
+            quos iure voluptatibus vitae accusantium deserunt dicta doloremque?
+            Commodi quidem saepe suscipit exercitationem molestias possimus?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+            voluptatem delectus architecto laudantium nam laboriosam, magnam
+            expedita eligendi maxime, amet voluptas ducimus inventore officiis
+            obcaecati quia perspiciatis modi omnis eos!
+      `,
     },
     {
       imageUrl: "/back-shot.jpg",
       title: "Why ?",
-      desc: "thought",
+      desc: `There are so many of you wndering for solutions. 
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Reiciendis, iure facere! Reprehenderit cupiditate, facilis tempore
+            quos iure voluptatibus vitae accusantium deserunt dicta doloremque?
+            Commodi quidem saepe suscipit exercitationem molestias possimus?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+            voluptatem delectus architecto laudantium nam laboriosam, magnam
+            expedita eligendi maxime, amet voluptas ducimus inventore officiis
+            obcaecati quia perspiciatis modi omnis eos!`,
     },
   ]);
   const [couroselList, setCouroselList] = useState(allCouroselData.slice(1));
@@ -32,15 +50,15 @@ const Introduction = ({ introductionRef }) => {
 
   // animate handler
   const ImageVariants = {
-    enter: () => ({
+    enter: {
       opacity: 0,
       y: smallDivRef?.current?.offsetTop || window.screen.height / 4,
       x: smallDivRef?.current?.offsetLeft || window.screen.width / 2,
       borderRadius: "100%",
       width: "208px",
       height: "240px",
-    }),
-    active: () => ({
+    },
+    active: {
       opacity: 1,
       y: 0,
       x: 0,
@@ -51,33 +69,33 @@ const Introduction = ({ introductionRef }) => {
         delay: 0.1,
         duration: 0.6,
       },
-    }),
-    exit: () => ({
+    },
+    exit: {
       x: 200,
       opacity: 0,
       transition: { duration: 0.1 },
-    }),
+    },
   };
 
   const contentVariants = {
-    enter: () => ({
+    enter: {
       opacity: 0,
       translateY: 150,
-    }),
-    active: () => ({
+    },
+    active: {
       opacity: 1,
       translateY: 0,
       transition: {
         delay: 0.3,
         duration: 0.6,
       },
-    }),
-    exit: () => ({
+    },
+    exit: {
       opacity: 0,
       transition: {
         duration: 0.1,
       },
-    }),
+    },
   };
 
   //   selection handler
@@ -155,6 +173,7 @@ const Introduction = ({ introductionRef }) => {
             exit="exit"
             src={selectedData?.imageUrl}
             alt=""
+            loading="lazy"
             className="w-full h-full object-cover brightness-50"
           />
         )}
@@ -167,7 +186,7 @@ const Introduction = ({ introductionRef }) => {
           initial="enter"
           animate="active"
           exit="exit"
-          className="absolute top-0 text-white ps-3 sm:ps-20 pe-2 pb-3 sm:pe-10 sm:pt-16 h-4/5 overflow-y-scroll"
+          className="absolute top-0 text-white ps-3 sm:ps-20 pe-2 pb-3 sm:pe-10 pt-10 sm:pt-16 h-4/5 overflow-y-scroll"
         >
           <h4 className="text-8xl font-PG">{selectedData?.title}</h4>
           <p>{selectedData?.desc}</p>

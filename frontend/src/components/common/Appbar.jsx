@@ -29,15 +29,21 @@ const Appbar = () => {
         </div>
       </div>
       {/* menus */}
-      <div className={`ms-auto ${isOpen ? "block mt-8" : "hidden"} sm:flex`}>
+      <div
+        className={`${
+          isOpen ? "mt-8 sm:mt-0  w-full sm:w-fit" : "hidden"
+        } sm:flex ms-auto`}
+      >
         <Link to="/">
           <h6 className="mr-8 sm:mr-10 hover:cursor-pointer hover:bg-yellow-600 sm:hover:bg-inherit sm:hover:text-yellow-600 p-2 sm:p-0 rounded">
             Home
           </h6>
         </Link>
-        <h6 className="mr-8 sm:mr-10 hover:cursor-pointer hover:bg-yellow-600 sm:hover:bg-inherit sm:hover:text-yellow-600 p-2 sm:p-0 rounded">
-          About
-        </h6>
+        <Link to="/about">
+          <h6 className="mr-8 sm:mr-10 hover:cursor-pointer hover:bg-yellow-600 sm:hover:bg-inherit sm:hover:text-yellow-600 p-2 sm:p-0 rounded">
+            About
+          </h6>
+        </Link>
         <Link to="/complaints">
           <h6 className="mr-8 sm:mr-10 hover:cursor-pointer hover:bg-yellow-600 sm:hover:bg-inherit sm:hover:text-yellow-600 p-2 sm:p-0 rounded">
             compalint

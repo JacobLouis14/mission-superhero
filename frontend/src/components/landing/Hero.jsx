@@ -20,14 +20,25 @@ const Hero = ({ introductionRef, whyWebsiteRef }) => {
       <div className="h-dvh w-full bg-gradient-radial from-transparent to-black relative">
         <Appbar />
         {/* //////////Landing Main Section */}
-        <div className="flex justify-center align-bottom">
+        <div className="flex justify-center">
           {!imageClicked && (
-            <h6 className="text-center pt-10 text-yellow-700 text-5xl font-PG">
+            <motion.h6
+              initial={{
+                opacity: 0,
+                y: -30,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{ duration: 1 }}
+              className="text-center pt-10 text-yellow-700 text-5xl font-PG"
+            >
               Tap the hero to reveal
-            </h6>
+            </motion.h6>
           )}
           {imageClicked && (
-            <div className="pt-10 text-white relative w-full block sm:flex justify-center px-4 z-10">
+            <div className="pt-10 text-white relative w-full flex flex-col sm:flex-row justify-center px-4 z-10">
               <motion.button
                 className="rounded-full p-10 font-PG text-3xl text-yellow-700 border bg-gray-500/20 backdrop-blur-sm border-yellow-700 hover:text-white hover:bg-yellow-700 mt-5 sm:mt-0 sm:me-6"
                 initial={{
