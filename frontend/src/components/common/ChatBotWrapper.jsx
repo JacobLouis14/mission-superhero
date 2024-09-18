@@ -69,7 +69,6 @@ const ChatBotWrapper = () => {
       window.removeEventListener("resize", resizeListner);
     };
   }, []);
-  console.log(diamention);
 
   return (
     <ChatBot

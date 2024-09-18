@@ -12,7 +12,7 @@ const Landing = () => {
       <Hero introductionRef={introductionRef} whyWebsiteRef={whyWebsiteRef} />
       <Introduction introductionRef={introductionRef} />
       <WhyWebsite whyWebsiteRef={whyWebsiteRef} />
-      <div className="fixed bottom-10 right-20 text-white">
+      <div className="fixed bottom-10 right-20 text-white z-20">
         <ChatBotWrapper />
       </div>
     </div>

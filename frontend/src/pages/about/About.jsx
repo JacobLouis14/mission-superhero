@@ -9,7 +9,7 @@ const About = () => {
       <div className="min-h-screen">
         <Appbar />
         {/* mission */}
-        <div className="h-48 -mt-32 sm:-mt-20 bg-yellow-900 sm:rounded-b-full flex justify-center items-end pb-3">
+        <div className="h-60 -mt-44 sm:-mt-24 bg-yellow-900 sm:rounded-b-full flex justify-center items-end pb-3">
           <motion.h2
             initial={{
               opacity: 0,
@@ -52,14 +52,13 @@ const About = () => {
                 veniam! Itaque ducimus qui ab voluptatem totam, dignissimos unde
                 non magnam ratione quidem voluptatum, perspiciatis expedita
                 rerum. Nesciunt, eveniet.
-                <TimelineComp />
               </p>
+              <TimelineComp />
             </motion.div>
             <div>
               <img
                 src="/hero-mission.jpg"
                 alt="image"
-                loading="lazy"
                 className="brightness-50"
               />
             </div>

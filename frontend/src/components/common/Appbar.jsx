@@ -7,7 +7,9 @@ const Appbar = () => {
   return (
     <nav className="sm:flex text-white p-6 bg-gray-900/30 backdrop-blur-sm rounded-b">
       <div className="flex">
-        <h2>logo</h2>
+        <Link to="/" className="hover:cursor-pointer">
+          <img src="/logo.png" alt="" width={50} />
+        </Link>
         {/* button */}
         <div className="sm:hidden ms-auto">
           <button onClick={() => setIsOpen(!isOpen)}>

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Appbar from "../common/Appbar";
 import { motion } from "framer-motion";
 
@@ -23,18 +23,13 @@ const Hero = ({ introductionRef, whyWebsiteRef }) => {
         <div className="flex justify-center">
           {!imageClicked && (
             <motion.h6
-              initial={{
-                opacity: 0,
-                y: -30,
+              animate={{
+                scale: [1, 1.1, 1],
               }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              transition={{ duration: 1 }}
-              className="text-center pt-10 text-yellow-700 text-5xl font-PG"
+              transition={{ duration: 1, repeat: Infinity }}
+              className="text-center pt-20 text-yellow-700 text-5xl font-PG"
             >
-              Tap the hero to reveal
+              Tap to reveal
             </motion.h6>
           )}
           {imageClicked && (
