@@ -17,12 +17,12 @@ const Login = () => {
   });
 
   const loginSubmitHandler = async () => {
-    setRenderHelper({ isLoading: true, isSubmit: true });
     const { email, password } = loginData;
     if (!email || !password) {
       alert("Complete the full form data");
       return;
     }
+    setRenderHelper({ isLoading: true, isSubmit: true });
 
     const res = await loginApiHandler(loginData);
     // console.log(res);

@@ -15,13 +15,13 @@ const Complaints = () => {
 
   //   submit handler
   const submitHandler = async (e) => {
-    setIsLoading(true);
     e.preventDefault();
     const { name, email, grievance } = complaintData;
     if (!name || !email || !grievance) {
       alert("Fill up the data");
       return;
     }
+    setIsLoading(true);
 
     const res = await createGrivenceApi({
       data: complaintData,
